@@ -3,64 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的轻量静态站</title>
+    <title>街霸6 JP 新手教学站</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-    <header>
-        <h1>简易工具站</h1>
-        <p>仿 ei.raiden.ink 风格的轻量静态页</p>
-    </header>
+<body class="app-container">
+    <!-- 侧边栏导航 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2><<i class="fa-solid fa-fist-raised"></</i> JP教学站</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="#home" class="menu-item active">
+                <<i class="fa-solid fa-house"></</i>
+                <span>首页</span>
+            </a>
+            <a href="#foreword" class="menu-item">
+                <<i class="fa-solid fa-book-open"></</i>
+                <span>前言</span>
+            </a>
+            <a href="#qq-group" class="menu-item">
+                <<i class="fa-solid fa-users"></</i>
+                <span>交流群</span>
+            </a>
+            <a href="#battle-idea" class="menu-item">
+                <<i class="fa-solid fa-brain"></</i>
+                <span>实战思路</span>
+            </a>
+            <a href="#moves-analysis" class="menu-item">
+                <<i class="fa-solid fa-table-cells"></</i>
+                <span>拳脚分析</span>
+            </a>
+            <a href="#combos" class="menu-item">
+                <<i class="fa-solid fa-person-running"></</i>
+                <span>民工连段</span>
+            </a>
+            <a href="#combos-summary" class="menu-item">
+                <<i class="fa-solid fa-list-check"></</i>
+                <span>连段汇总</span>
+            </a>
+            <a href="#corner-pressure" class="menu-item">
+                <<i class="fa-solid fa-arrows-to-corner"></</i>
+                <span>板边压制</span>
+            </a>
+            <a href="#tricks" class="menu-item">
+                <<i class="fa-solid fa-wand-magic-sparkles"></</i>
+                <span>千层套路</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <p>© 2026 JP新手教学站</p>
+        </div>
+    </aside>
 
-    <!-- 新增：大纲目录区域 -->
-    <div class="toc-container">
-        <h3>页面大纲</h3>
-        <ul class="toc-list">
-            <li><a href="#text-tool">文本转换工具</a></li>
-            <li><a href="#local-video">本地视频演示</a></li>
-            <li><a href="#bilibili-video">B站视频演示</a></li>
-        </ul>
-    </div>
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <header id="home">
+            <h1>街霸6 JP 新手入门教学</h1>
+            <p>编写作者：B站逝川SHICHUAN | B站AcidKnowledge</p>
+        </header>
 
-    <main>
-        <!-- 给每个模块标题加id（锚点） -->
-        <div class="tool-card">
-            <h2 id="text-tool">文本转换工具</h2>
-            <textarea id="inputText" placeholder="输入要转换的文本..."></textarea>
-            <button id="convertBtn">转为大写</button>
-            <div id="result" class="result-box"></div>
+        <!-- 前言模块 -->
+        <div class="content-card" id="foreword">
+            <h2>一、前言</h2>
+            <p>不欢迎学习JP，快跑。文档有错误与不同理解处欢迎指出。</p>
+            <!-- 复制位置：文档前言部分，开头为“不欢迎学习JP，快跑。文档有错误与不同理解处欢迎指出。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴文档“前言”章节完整内容 -->
+                
+                <p>学习此文档需要对基础的词汇有了解，比如发生；确反；帧数；抢招等等。你不了解也能看，但若知道这些词汇能更好的帮助你理解这个游戏</p>
+                
+                <p>此文档不适用于现代模式。（别玩现代JP，会变得不幸，很不幸，非常不幸）</p>
+            
+            </div>
+            <p>词汇查询网站：<a href="https://ftg.liuxiaohan.cn/main" target="_blank">https://ftg.liuxiaohan.cn/main</a></p>
         </div>
 
-        <div class="video-card">
-            <h2 id="local-video">本地视频演示</h2>
-            <video 
-                src="video/demo.mp4" 
-                width="100%" 
-                controls 
-                preload="metadata"
-            >
-                你的浏览器不支持HTML5视频播放，请升级浏览器！
-            </video>
-        </div>
-
-        <div class="video-card">
-            <h2 id="bilibili-video">B站视频演示</h2>
-            <div class="video-container">
-                <iframe 
-                    src="//player.bilibili.com/player.html?aid=977990099&bvid=BV1m8411z786&cid=1012269320&page=1" 
-                    scrolling="no" 
-                    border="0" 
-                    frameborder="no" 
-                    framespacing="0" 
-                    allowfullscreen="true"
-                ></iframe>
+        <!-- 交流群模块 -->
+        <div class="content-card" id="qq-group">
+            <h2>二、街霸6交流QQ群聊推荐</h2>
+            <!-- 复制位置：文档“街霸6交流QQ群聊推荐”部分，开头为“本文档中所涉及的 QQ 群聊相关信息，均为公开可查的交流平台信息整理。” -->
+            <div class="copy-area">
+                <p>本文档中所涉及的 QQ 群聊相关信息，均为公开可查的交流平台信息整理。若相关群聊的群主认为该展示行为可能影响群组权益，或不愿将群组信息纳入本文档展示，可与文档作者联系。我方在核实群主身份后将完成相关信息的删除处理。</p>
+                
+                <!-- 群聊信息表格（清晰对齐，适配移动端） -->
+                <table class="qq-group-table">
+                    <thead>
+                        <tr>
+                            <th>群聊名称</th>
+                            <th>QQ群号</th>
+                            <th>群主</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>某科学的神龙烈破</td>
+                            <td>951668786</td>
+                            <td>GTW|蓝钻_Official</td>
+                        </tr>
+                        <tr>
+                            <td>街霸6菜鸟基地</td>
+                            <td>766630575</td>
+                            <td>小忆</td>
+                        </tr>
+                        <tr>
+                            <td>街霸6→Abstract Noobs 侏儒</td>
+                            <td>6805343884</td>
+                            <td>过河卒</td>
+                        </tr>
+                        <tr>
+                            <td>街霸6→HSTU2042级街霸本科生通知群</td>
+                            <td>996420304</td>
+                            <td>飘逸Ce</td>
+                        </tr>
+                        <tr>
+                            <td>街霸神！</td>
+                            <td>932912558</td>
+                            <td>卡西卡西17</td>
+                        </tr>
+                        <tr>
+                            <td>比奇堡强人俱乐部</td>
+                            <td>755634527</td>
+                            <td>哲学家是派大星</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </main>
 
-    <footer>
-        <p>我的静态网站 © 2026</p>
-    </footer>
+        <!-- 拳脚分析模块 -->
+        <div class="content-card" id="moves-analysis">
+            <h2>四、拳脚分析</h2>
+            <h3>4.1 轻攻击</h3>
+            <!-- 复制位置：文档“拳脚分析-轻攻击”部分，开头为“站轻拳：发生6f，连段组件；” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“轻攻击”所有拳脚说明 -->
+            </div>
+
+            <h3>4.2 中攻击</h3>
+            <!-- 复制位置：文档“拳脚分析-中攻击”部分，开头为“站中拳：12f发生；长度非常长，是JP立回阶段的主要按键之一。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“中攻击”所有拳脚说明 -->
+            </div>
+
+            <h3>4.3 重攻击</h3>
+            <!-- 复制位置：文档“拳脚分析-重攻击”部分，开头为“站重拳：12f发生，打中红康会有特殊确反；” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“重攻击”所有拳脚说明 -->
+            </div>
+        </div>
+
+        <!-- 民工连段模块（留视频位置） -->
+        <div class="content-card" id="combos">
+            <h2>五、民工连段</h2>
+            <!-- 复制位置：文档“民工连段”前言部分，开头为“JP的一大乐趣（难点）就是各种各样的连段。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“民工连段”章节前言内容 -->
+            </div>
+
+            <h3>5.1 轻攻击起手的连段</h3>
+            <!-- 复制位置：文档“轻攻击起手的连段”部分，开头为“一般在抢招按到的时候使用。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴轻攻击起手连段的文字说明 -->
+            </div>
+            <!-- 视频位置1：轻攻击起手连段演示 -->
+            <div class="combo-video">
+                <h4>连段演示视频</h4>
+                <video 
+                    src="video/light-attack-combo.mp4"  <!-- 后续替换为实际视频文件名 -->
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                    poster="video/light-attack-cover.jpg"  <!-- 可选：视频封面图 -->
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>5.2 中攻击起手的连段</h3>
+            <!-- 复制位置：文档“中攻击起手的连段”部分，开头为“可取消中攻击→中风神” -->
+            <div class="copy-area">
+                <!-- 此处粘贴中攻击起手连段的文字说明 -->
+            </div>
+            <!-- 视频位置2：中攻击起手连段演示 -->
+            <div class="combo-video">
+                <h4>连段演示视频</h4>
+                <video 
+                    src="video/mid-attack-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>5.3 重攻击起手的连段</h3>
+            <!-- 复制位置：文档“重攻击起手的连段”部分，开头为“站重脚>站重拳 TC→轻鬼/中风神” -->
+            <div class="copy-area">
+                <!-- 此处粘贴重攻击起手连段的文字说明 -->
+            </div>
+            <!-- 视频位置3：重攻击起手连段演示 -->
+            <div class="combo-video">
+                <h4>连段演示视频</h4>
+                <video 
+                    src="video/heavy-attack-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>5.4 带入SA的连段</h3>
+            <h4>5.4.1 SA1连段</h4>
+            <!-- 复制位置：文档“SA1连段”部分，开头为“【任意前置连段】→od风神→SA1” -->
+            <div class="copy-area">
+                <!-- 此处粘贴SA1连段的文字说明 -->
+            </div>
+            <!-- 视频位置4：SA1连段演示 -->
+            <div class="combo-video">
+                <h4>SA1连段演示视频</h4>
+                <video 
+                    src="video/sa1-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h4>5.4.2 SA2连段</h4>
+            <!-- 复制位置：文档“SA2连段”部分，开头为“JP的SA2是全游戏最强SA2。相应地，对应连段也较为重要。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴SA2连段的文字说明 -->
+            </div>
+            <!-- 视频位置5：SA2连段演示 -->
+            <div class="combo-video">
+                <h4>SA2连段演示视频</h4>
+                <video 
+                    src="video/sa2-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h4>5.4.3 SA3连段</h4>
+            <!-- 复制位置：文档“SA3连段”部分，开头为“SA3可以在可取消的必杀技以及可取消的拳脚后衔接，除了不要在重风神和od风神之后直接出SA3” -->
+            <div class="copy-area">
+                <!-- 此处粘贴SA3连段的文字说明 -->
+            </div>
+            <!-- 视频位置6：SA3连段演示 -->
+            <div class="combo-video">
+                <h4>SA3连段演示视频</h4>
+                <video 
+                    src="video/sa3-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>5.5 迸放连段</h3>
+            <!-- 复制位置：文档“迸放连段”部分，开头为“迸放连段给出两种：” -->
+            <div class="copy-area">
+                <!-- 此处粘贴迸放连段的文字说明 -->
+            </div>
+            <!-- 视频位置7：迸放连段演示 -->
+            <div class="combo-video">
+                <h4>迸放连段演示视频</h4>
+                <video 
+                    src="video/burst-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>5.6 迸墙连段</h3>
+            <!-- 复制位置：文档“迸墙连段”部分，开头为“蹲中拳→前重脚→中风神→站重拳→后续任意” -->
+            <div class="copy-area">
+                <!-- 此处粘贴迸墙连段的文字说明 -->
+            </div>
+            <!-- 视频位置8：迸墙连段演示 -->
+            <div class="combo-video">
+                <h4>迸墙连段演示视频</h4>
+                <video 
+                    src="video/wall-burst-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>5.7 晕连</h3>
+            <!-- 复制位置：文档“晕连”部分，开头为“裂隙→前前→站重拳→中鬼→放帧前重脚→中风神→站重拳→后续任意” -->
+            <div class="copy-area">
+                <!-- 此处粘贴晕连的文字说明 -->
+            </div>
+            <!-- 视频位置9：晕连演示视频 -->
+            <div class="combo-video">
+                <h4>晕连演示视频</h4>
+                <video 
+                    src="video/stun-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+        </div>
+
+        <!-- 连段汇总模块（留视频位置） -->
+        <div class="content-card" id="combos-summary">
+            <h2>六、连段汇总</h2>
+            <!-- 复制位置：文档“连段汇总”前言部分，开头为“此部分包含部分上文所提民工连段。所提及所有连段均转载记录于互联网。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“连段汇总”章节前言内容 -->
+            </div>
+
+            <h3>6.1 SA1连段汇总</h3>
+            <!-- 复制位置：文档“SA1连段”汇总部分，开头为“【任意前置连段】→od风神→SA1” -->
+            <div class="copy-area">
+                <!-- 此处粘贴SA1连段汇总的所有文字说明 -->
+            </div>
+            <!-- 视频位置10：SA1连段汇总演示 -->
+            <div class="combo-video">
+                <h4>SA1连段汇总演示视频</h4>
+                <video 
+                    src="video/sa1-summary-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>6.2 SA2连段汇总</h3>
+            <!-- 复制位置：文档“SA2连段”汇总部分，开头为“【通用】SA2→蹲中脚→站重脚→蹲重拳→重裂隙→站重脚>重拳 TC→地刺→重风神→中鬼→地刺” -->
+            <div class="copy-area">
+                <!-- 此处粘贴SA2连段汇总的所有文字说明 -->
+            </div>
+            <!-- 视频位置11：SA2连段汇总演示 -->
+            <div class="combo-video">
+                <h4>SA2连段汇总演示视频</h4>
+                <video 
+                    src="video/sa2-summary-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>6.3 需要确认敌方状态的连段</h3>
+            <!-- 复制位置：文档“需要确认敌方状态的连段”部分，开头为“站轻拳/蹲轻拳【确反康】→站中脚→......” -->
+            <div class="copy-area">
+                <!-- 此处粘贴该类连段的所有文字说明 -->
+            </div>
+            <!-- 视频位置12：确认敌方状态连段演示 -->
+            <div class="combo-video">
+                <h4>确认敌方状态连段演示视频</h4>
+                <video 
+                    src="video/confirm-state-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>6.4 晕连汇总</h3>
+            <!-- 复制位置：文档“晕连”汇总部分，开头为“迸晕→裂隙→前前→站重拳→中鬼→放帧前重脚→中风神→站重拳→后续任意” -->
+            <div class="copy-area">
+                <!-- 此处粘贴晕连汇总的所有文字说明 -->
+            </div>
+            <!-- 视频位置13：晕连汇总演示 -->
+            <div class="combo-video">
+                <h4>晕连汇总演示视频</h4>
+                <video 
+                    src="video/stun-summary-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>6.5 确反连汇总</h3>
+            <!-- 复制位置：文档“确反连”汇总部分，开头为“【贴身，JP背向版边】站重拳→od远近裂隙→站中脚→中风神→放帧od远裂隙→站重拳→中鬼→放帧中鬼→地刺→SA3” -->
+            <div class="copy-area">
+                <!-- 此处粘贴确反连汇总的所有文字说明 -->
+            </div>
+            <!-- 视频位置14：确反连汇总演示 -->
+            <div class="combo-video">
+                <h4>确反连汇总演示视频</h4>
+                <video 
+                    src="video/counter-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+
+            <h3>6.6 迸放连段汇总</h3>
+            <!-- 复制位置：文档“迸放连段”汇总部分，开头为“【打防迸上墙】蹲中拳→前重脚→......” -->
+            <div class="copy-area">
+                <!-- 此处粘贴迸放连段汇总的所有文字说明 -->
+            </div>
+            <!-- 视频位置15：迸放连段汇总演示 -->
+            <div class="combo-video">
+                <h4>迸放连段汇总演示视频</h4>
+                <video 
+                    src="video/burst-summary-combo.mp4" 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                >
+                    你的浏览器不支持HTML5视频播放，请升级浏览器！
+                </video>
+            </div>
+        </div>
+
+        <!-- 板边压制模块 -->
+        <div class="content-card" id="corner-pressure">
+            <h2>七、JP的板边压制</h2>
+            <!-- 复制位置：文档“JP的板边压制”部分，开头为“JP的版边压制力非常恐怖，在这一栏我们将介绍JP在版边的各种裂隙套路与循环压制。” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“JP的板边压制”章节完整内容（含所有子模块） -->
+            </div>
+            <p>推荐参考视频：<a href="https://www.bilibili.com/video/BV1cmyBYhEMr" target="_blank">《JP版边常用压制套路》——Kuroasing阿星</a></p>
+        </div>
+
+        <!-- 千层套路模块 -->
+        <div class="content-card" id="tricks">
+            <h2>八、JP的千层套路</h2>
+            <!-- 复制位置：文档“JP的千层套路”部分，开头为“【】SA2→蹲中拳→重裂隙→前前→站轻脚→传送” -->
+            <div class="copy-area">
+                <!-- 此处粘贴“JP的千层套路”章节完整内容 -->
+            </div>
+            <p>最后编写日期：2025年12月19日</p>
+        </div>
+
+        <footer>
+            <p>街霸6 JP 新手教学站 © 2026 | 基于B站逝川SHICHUAN、AcidKnowledge原创文档制作</p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
