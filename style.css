@@ -88,3 +88,10 @@ footer {
     color: #777;
     font-size: 0.9rem;
 }
+/* 目录当前激活项高亮 */
+.toc-list a.active {
+    color: #e74c3c; /* 红色高亮 */
+    font-weight: bold; /* 加粗 */
+}
+
+/* 保留之前的所有样式... */

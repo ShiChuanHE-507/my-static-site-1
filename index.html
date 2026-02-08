@@ -2,35 +2,66 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <!-- 适配手机端，避免页面变形 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的轻量静态站</title>
-    <!-- 引入CSS样式文件 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 页面头部 -->
     <header>
         <h1>简易工具站</h1>
         <p>仿 ei.raiden.ink 风格的轻量静态页</p>
     </header>
 
-    <!-- 核心功能区 -->
+    <!-- 新增：大纲目录区域 -->
+    <div class="toc-container">
+        <h3>页面大纲</h3>
+        <ul class="toc-list">
+            <li><a href="#text-tool">文本转换工具</a></li>
+            <li><a href="#local-video">本地视频演示</a></li>
+            <li><a href="#bilibili-video">B站视频演示</a></li>
+        </ul>
+    </div>
+
     <main>
+        <!-- 给每个模块标题加id（锚点） -->
         <div class="tool-card">
-            <h2>文本转换工具</h2>
+            <h2 id="text-tool">文本转换工具</h2>
             <textarea id="inputText" placeholder="输入要转换的文本..."></textarea>
             <button id="convertBtn">转为大写</button>
             <div id="result" class="result-box"></div>
         </div>
+
+        <div class="video-card">
+            <h2 id="local-video">本地视频演示</h2>
+            <video 
+                src="video/demo.mp4" 
+                width="100%" 
+                controls 
+                preload="metadata"
+            >
+                你的浏览器不支持HTML5视频播放，请升级浏览器！
+            </video>
+        </div>
+
+        <div class="video-card">
+            <h2 id="bilibili-video">B站视频演示</h2>
+            <div class="video-container">
+                <iframe 
+                    src="//player.bilibili.com/player.html?aid=977990099&bvid=BV1m8411z786&cid=1012269320&page=1" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    allowfullscreen="true"
+                ></iframe>
+            </div>
+        </div>
     </main>
 
-    <!-- 页面底部 -->
     <footer>
         <p>我的静态网站 © 2026</p>
     </footer>
 
-    <!-- 引入JS交互文件 -->
     <script src="script.js"></script>
 </body>
 </html>
