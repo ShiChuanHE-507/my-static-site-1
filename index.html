@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机端，避免页面变形 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的轻量静态站</title>
+    <!-- 引入CSS样式文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <h1>简易工具站</h1>
+        <p>仿 ei.raiden.ink 风格的轻量静态页</p>
+    </header>
+
+    <!-- 核心功能区 -->
+    <main>
+        <div class="tool-card">
+            <h2>文本转换工具</h2>
+            <textarea id="inputText" placeholder="输入要转换的文本..."></textarea>
+            <button id="convertBtn">转为大写</button>
+            <div id="result" class="result-box"></div>
+        </div>
+    </main>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>我的静态网站 © 2026</p>
+    </footer>
+
+    <!-- 引入JS交互文件 -->
+    <script src="script.js"></script>
+</body>
+</html>
