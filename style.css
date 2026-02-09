@@ -169,207 +169,56 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 移动端适配（侧边栏缩小/隐藏，可选） */
+
 @media (max-width: 768px) {
-    .sidebar {
-        width: 60px; /* 缩小侧边栏 */
-    }
-    .sidebar-hea/* 全局重置 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Microsoft YaHei", sans-serif;
-}
-
-/* 页面整体布局 */
-.app-container {
-    display: flex;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-}
-
-/* 侧边栏样式 */
-.sidebar {
-    width: 220px;
-    background-color: #1e293b;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    padding: 20px 0;
-}
-
-/* 侧边栏头部 */
-.sidebar-header {
-    padding: 0 20px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #334155;
-    padding-bottom: 15px;
-}
-.sidebar-header h2 {
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* 侧边栏菜单 */
-.sidebar-menu {
-    flex: 1;
-}
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 20px;
-    color: #94a3b8;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-.menu-item.active, .menu-item:hover {
-    background-color: #334155;
-    color: white;
-    border-left: 3px solid #3498db;
-}
-.menu-item i {
-    font-size: 1.1rem;
-}
-
-/* 侧边栏底部 */
-.sidebar-footer {
-    padding: 0 20px;
-    border-top: 1px solid #334155;
-    padding-top: 15px;
-    font-size: 0.8rem;
-    color: #94a3b8;
-}
-
-/* 主内容区 */
-.main-content {
-    flex: 1;
-    padding: 30px;
-    max-width: calc(100vw - 220px);
-    overflow-x: hidden;
-}
-
-/* 头部样式 */
-header {
-    text-align: left;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-}
-header h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-/* 卡片通用样式 */
-.tool-card, .video-card, .about-card {
-    background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-}
-.tool-card h2, .video-card h2, .about-card h2 {
-    color: #3498db;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
-}
-
-/* 文本工具样式 */
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    resize: vertical;
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-button:hover {
-    background-color: #2980b9;
-}
-.result-box {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    min-height: 50px;
-}
-
-/* 视频容器样式 */
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 4px;
-}
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* 页脚样式 */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #777;
-    font-size: 0.9rem;
-}
-
-/* 平滑滚动 */
-html {
-    scroll-behavior: smooth;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
+    /* 侧边栏缩小为图标模式 */
     .sidebar {
         width: 60px;
+        padding: 20px 0;
     }
-    .sidebar-header h2 span, .menu-item span, .sidebar-footer {
-        display: none;
+    /* 隐藏侧边栏的文字、底部版权（只留图标） */
+    .sidebar-header h2 span, 
+    .menu-item span, 
+    .sidebar-footer {
+        display: none !important; /* 强制隐藏，避免重复 */
     }
+    /* 侧边栏头部图标居中 */
+    .sidebar-header {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 20px;
+        border-bottom: none;
+    }
+    .sidebar-header h2 {
+        justify-content: center;
+    }
+    /* 菜单图标居中 */
     .menu-item {
         justify-content: center;
-        padding: 12px 0;
+        padding: 15px 0;
+        border-left: none; /* 隐藏左侧高亮条（移动端空间小） */
     }
+    /* 主内容区适配 */
     .main-content {
         max-width: calc(100vw - 60px);
         padding: 20px;
     }
-}der h2 span, .menu-item span, .sidebar-footer {
-        display: none; /* 隐藏文字，只留图标 */
+    /* 内容卡片适配 */
+    .content-card {
+        padding: 15px;
     }
-    .menu-item {
-        justify-content: center; /* 图标居中 */
-        padding: 12px 0;
+    .content-card h2 {
+        font-size: 1.4rem;
     }
-    .main-content {
-        max-width: calc(100vw - 60px);
-        padding: 20px;
+    .content-card h3 {
+        font-size: 1.2rem;
+    }
+    .copy-area {
+        padding: 10px;
+    }
+    .combo-video {
+        padding: 15px;
     }
 }
 /* 保留之前的所有样式，新增以下内容 */
@@ -424,6 +273,21 @@ html {
         padding: 8px 5px;
         font-size: 0.9rem;
     }
+}
+/* 实战思路模块子标题样式 */
+.copy-area h4 {
+    color: #3498db;
+    margin: 20px 0 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/* 实战思路列表样式优化 */
+.copy-area ul li {
+    margin: 8px 0;
+    line-height: 1.8;
+}
+.copy-area ul li b {
+    color: #e74c3c; /* 关键招式标红，突出重点 */
 }
 /* 复制区域样式（标注文本粘贴位置） */
 .copy-area {
