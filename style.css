@@ -13,7 +13,7 @@
     background-color: #f5f5f5;
 }
 
-/* 侧边栏样式（类似Netlify） */
+/* 侧边栏样式（无图标版 + 修复搜索框布局） */
 .sidebar {
     width: 220px; /* 固定宽度 */
     background-color: #1e293b; /* 深色背景 */
@@ -23,31 +23,64 @@
     position: sticky; /* 滚动时固定在左侧 */
     top: 0;
     height: 100vh; /* 占满视口高度 */
-    padding: 20px 0;
+    padding: 20px 0 0; /* 顶部padding，底部无padding（给footer留空间） */
 }
 
-/* 侧边栏头部 */
+/* 侧边栏头部（无图标版） */
 .sidebar-header {
-    padding: 0 20px;
-    margin-bottom: 30px;
+    padding: 0 20px 15px; /* 底部padding，和搜索框分隔 */
     border-bottom: 1px solid #334155;
-    padding-bottom: 15px;
 }
 .sidebar-header h2 {
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 8px; /* 图标和文字间距 */
+    text-align: left; /* 仅文字，左对齐 */
 }
 
-/* 侧边栏菜单 */
+/* 新增：搜索框容器（单独区域） */
+.search-box-wrapper {
+    padding: 15px 20px; /* 上下左右padding，和标题/菜单分隔 */
+    border-bottom: 1px solid #334155;
+}
+.search-box {
+    display: flex;
+    gap: 8px;
+    width: 100%; /* 占满容器宽度 */
+}
+#searchInput {
+    flex: 1;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #334155;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+}
+#searchInput::placeholder {
+    color: #94a3b8;
+}
+#searchBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* 防止按钮文字换行 */
+}
+#searchBtn:hover {
+    background-color: #2980b9;
+}
+
+/* 侧边栏菜单（无图标版） */
 .sidebar-menu {
-    flex: 1; /* 占满中间空间 */
+    flex: 1; /* 占满中间剩余空间 */
+    padding: 15px 0; /* 上下padding，和搜索框/footer分隔 */
+    overflow-y: auto; /* 菜单过多时可滚动 */
 }
 .menu-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: block; /* 纯文字，块级元素 */
     padding: 12px 20px;
     color: #94a3b8; /* 未激活颜色 */
     text-decoration: none;
@@ -59,17 +92,15 @@
     color: white;
     border-left: 3px solid #3498db; /* 左侧高亮条 */
 }
-.menu-item i {
-    font-size: 1.1rem;
-}
 
-/* 侧边栏底部 */
+/* 侧边栏底部（固定在底部） */
 .sidebar-footer {
-    padding: 0 20px;
+    padding: 15px 20px;
     border-top: 1px solid #334155;
     padding-top: 15px;
     font-size: 0.8rem;
     color: #94a3b8;
+    margin-top: auto; /* 自动推到侧边栏底部 */
 }
 
 /* 主内容区 */
@@ -169,60 +200,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-@media (max-width: 768px) {
-    /* 侧边栏缩小为图标模式 */
-    .sidebar {
-        width: 60px;
-        padding: 20px 0;
-    }
-    /* 隐藏侧边栏的文字、底部版权（只留图标） */
-    .sidebar-header h2 span, 
-    .menu-item span, 
-    .sidebar-footer {
-        display: none !important; /* 强制隐藏，避免重复 */
-    }
-    /* 侧边栏头部图标居中 */
-    .sidebar-header {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin-bottom: 20px;
-        border-bottom: none;
-    }
-    .sidebar-header h2 {
-        justify-content: center;
-    }
-    /* 菜单图标居中 */
-    .menu-item {
-        justify-content: center;
-        padding: 15px 0;
-        border-left: none; /* 隐藏左侧高亮条（移动端空间小） */
-    }
-    /* 主内容区适配 */
-    .main-content {
-        max-width: calc(100vw - 60px);
-        padding: 20px;
-    }
-    /* 内容卡片适配 */
-    .content-card {
-        padding: 15px;
-    }
-    .content-card h2 {
-        font-size: 1.4rem;
-    }
-    .content-card h3 {
-        font-size: 1.2rem;
-    }
-    .copy-area {
-        padding: 10px;
-    }
-    .combo-video {
-        padding: 15px;
-    }
-}
-/* 保留之前的所有样式，新增以下内容 */
-
 /* 内容卡片样式优化（适配教学文本） */
 .content-card {
     background: white;
@@ -248,6 +225,7 @@ html {
     margin: 15px 0 10px;
     font-size: 1.1rem;
 }
+
 /* QQ群聊表格样式 */
 .qq-group-table {
     width: 100%;
@@ -267,13 +245,7 @@ html {
 .qq-group-table tr:hover {
     background-color: #fafafa;
 }
-/* 移动端表格适配（避免横向滚动） */
-@media (max-width: 768px) {
-    .qq-group-table th, .qq-group-table td {
-        padding: 8px 5px;
-        font-size: 0.9rem;
-    }
-}
+
 /* 实战思路模块子标题样式 */
 .copy-area h4 {
     color: #3498db;
@@ -281,6 +253,7 @@ html {
     font-size: 1.1rem;
     font-weight: bold;
 }
+
 /* 实战思路列表样式优化 */
 .copy-area ul li {
     margin: 8px 0;
@@ -289,6 +262,7 @@ html {
 .copy-area ul li b {
     color: #e74c3c; /* 关键招式标红，突出重点 */
 }
+
 /* 复制区域样式（标注文本粘贴位置） */
 .copy-area {
     background-color: #f9f9f9;
@@ -332,8 +306,52 @@ html {
     text-decoration: underline;
 }
 
-/* 移动端适配优化（教学文本可读性） */
+/* 移动端适配（统一整合，修复所有布局） */
 @media (max-width: 768px) {
+    /* 侧边栏适配 */
+    .sidebar {
+        width: 100px;
+        padding: 20px 0 0;
+    }
+    /* 移动端标题 */
+    .sidebar-header h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    /* 移动端搜索框 */
+    .search-box-wrapper {
+        padding: 10px 5px;
+    }
+    .search-box {
+        gap: 4px;
+    }
+    #searchInput {
+        font-size: 0.8rem;
+        padding: 6px 6px;
+    }
+    #searchBtn {
+        padding: 6px 6px;
+        font-size: 0.7rem;
+    }
+    /* 移动端菜单 */
+    .menu-item {
+        padding: 12px 0;
+        font-size: 0.9rem;
+        text-align: center;
+        border-left: none; /* 隐藏左侧高亮条 */
+    }
+    /* 移动端底部 */
+    .sidebar-footer {
+        font-size: 0.7rem;
+        padding: 10px 5px;
+        text-align: center;
+    }
+    /* 主内容区适配 */
+    .main-content {
+        max-width: calc(100vw - 100px);
+        padding: 20px;
+    }
+    /* 内容卡片移动端适配 */
     .content-card {
         padding: 15px;
     }
@@ -348,5 +366,10 @@ html {
     }
     .combo-video {
         padding: 15px;
+    }
+    /* 表格移动端适配 */
+    .qq-group-table th, .qq-group-table td {
+        padding: 8px 5px;
+        font-size: 0.9rem;
     }
 }
