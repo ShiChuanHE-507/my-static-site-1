@@ -373,3 +373,120 @@ html {
         font-size: 0.9rem;
     }
 }
+/* 拳脚数据卡片整体布局 */
+.move-data-card {
+  display: flex;
+  gap: 20px;
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+.move-left {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.move-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 左侧：招式名称、输入按钮、判定图 */
+.move-name {
+  font-size: 1.4rem;
+  color: #38bdf8;
+  margin: 0;
+}
+.move-inputs {
+  display: flex;
+  gap: 8px;
+}
+.input-btn {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #334155;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.input-btn.lp { color: #ef4444; }
+.input-btn.lk { color: #10b981; }
+.hitbox-container {
+  position: relative;
+}
+.hitbox-img {
+  width: 100%;
+  border-radius: 4px;
+}
+.hitbox-toggle {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: 1px solid #64748b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 右侧：数据表格 */
+.move-table-wrapper {
+  overflow-x: auto;
+}
+.move-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #334155;
+  border-radius: 6px;
+}
+.move-data-table th,
+.move-data-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #475569;
+}
+.move-data-table th {
+  background: #1e293b;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+.move-data-table td {
+  font-family: monospace;
+}
+.positive { color: #34d399; font-weight: bold; }
+.negative { color: #f87171; font-weight: bold; }
+.neutral { color: #fbbf24; font-weight: bold; }
+
+/* 右侧：文字说明 */
+.move-notes {
+  line-height: 1.6;
+}
+.move-notes ul {
+  margin: 0 0 15px 20px;
+  padding: 0;
+}
+.move-notes li {
+  margin: 8px 0;
+}
+.move-notes .move-code {
+  font-size: 1.00em !important; /* 强制覆盖，确保生效 */
+  font-weight: bold;
+  color:#38bdf8
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .move-data-card {
+    flex-direction: column;
+  }
+  .move-left {
+    flex: none;
+  }
+}

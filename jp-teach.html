@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>街霸6 JP 新手教学站</title>
+    <title>街霸6 JP WIKI</title>
     <link rel="stylesheet" href="style.css">
     <!-- 已删除Font Awesome（无图标，无需加载） -->
 </head>
@@ -14,7 +14,7 @@
     <aside class="sidebar">
         <!-- 1. 侧边栏头部 -->
         <div class="sidebar-header">
-            <h2>JP教学站</h2>
+            <h2>JP WIKI</h2>
         </div>
 
         <!-- 2. 搜索框（正常显示） -->
@@ -36,9 +36,11 @@
             <a href="#qq-group" class="menu-item">
                 <span>交流群</span>
             </a>
+            <!--
             <a href="#battle-idea" class="menu-item">
                 <span>实战思路</span>
             </a>
+            -->
             <a href="#moves-analysis" class="menu-item">
                 <span>拳脚分析</span>
             </a>
@@ -58,20 +60,23 @@
 
         <!-- 4. 侧边栏底部 -->
         <div class="sidebar-footer">
-            <p>© 2026 JP新手教学站</p>
+            <p>© 2026 JP WIKI</p>
         </div>
     </aside>
 
     <!-- 主内容区 -->
     <main class="main-content">
         <header id="home">
-            <h1>街霸6 JP 新手入门教学【本站目前在建设中；文本内容均为AI生成，请勿学习!】</h1>
-            <p>编写作者：Bilibili - <a href="https://space.bilibili.com/407372148?spm_id_from=333.1007.0.0" target="_blank" style="color: rgb(0, 176, 251);">逝川SHICHUAN</a> Bilibili - <a href="https://space.bilibili.com/37662913?spm_id_from=333.337.search-card.all.click" target="_blank" style="color: rgb(0, 176, 251);">AcidKnowledge</a></p>
+            <h1>街霸6 JP WIKI【本站目前在建设中；文本内容均为AI生成，请勿学习!】</h1>
+            <p>编写作者：Bilibili - <a href="https://space.bilibili.com/407372148?spm_id_from=333.1007.0.0" target="_blank"
+                    style="color: rgb(0, 176, 251);">逝川SHICHUAN</a> Bilibili - <a
+                    href="https://space.bilibili.com/37662913?spm_id_from=333.337.search-card.all.click" target="_blank"
+                    style="color: rgb(0, 176, 251);">AcidKnowledge</a></p>
         </header>
 
         <!-- 前言模块 -->
         <div class="content-card" id="foreword">
-            <h2>一、前言</h2>
+            <h2>前言</h2>
             <p>不欢迎学习JP，快跑。文本内容有错误与不同理解处欢迎指出并讨论学习。</p>
             <div class="copy-area">
                 <p>本站仍在建设中，文本内容大多由AI生成，请勿学习，请各位稍安勿躁。</p>
@@ -81,7 +86,7 @@
 
         <!-- 交流群模块 -->
         <div class="content-card" id="qq-group">
-            <h2>二、街霸6交流QQ群聊推荐</h2>
+            <h2>街霸6交流QQ群聊推荐</h2>
             <div class="copy-area">
                 <p>本站中所涉及的 QQ
                     群聊相关信息，均为公开可查的交流平台信息整理。若相关群聊的群主认为该展示行为可能影响群组权益，或不愿将群组信息纳入本站展示，可与网站作者联系。我方在核实群主身份后将完成相关信息的删除处理。</p>
@@ -129,7 +134,7 @@
             </div>
         </div>
 
-        <!-- 实战思路模块 -->
+        <!-- 实战思路模块 
         <div class="content-card" id="battle-idea">
             <h2>三、新手JP实战思路讲解</h2>
             <div class="copy-area">
@@ -177,13 +182,77 @@
                 </ul>
             </div>
         </div>
+        -->
 
         <!-- 拳脚分析模块 -->
         <div class="content-card" id="moves-analysis">
-            <h2>四、拳脚分析</h2>
+            <h2>拳脚分析</h2>
             <h3>4.1 轻攻击</h3>
             <div class="copy-area">
                 <!-- 此处粘贴“轻攻击”所有拳脚说明 -->
+                <!-- 示例：JP 站轻拳（5LP）数据卡片 -->
+                <div class="content-card" id="move-5lp">
+                    <div class="move-data-card">
+                        <!-- 左侧：角色 + 判定框 + 按钮 -->
+                        <div class="move-left">
+                            <h3 class="move-name" style="color: chartreuse;">站轻拳（5lp）</h3>
+                            <div class="move-visual">
+                                <div class="hitbox-container">
+                                    <img src="photos/233px-SF6_JP_5lp_hitbox.png" alt="5LP Hitbox" class="hitbox-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 右侧：数据表格 + 文字说明 -->
+                        <div class="move-right">
+                            <!-- 数据表格 -->
+                            <div class="move-table-wrapper">
+                                <table class="move-data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>拳脚名称</th>
+                                            <th>发生帧</th>
+                                            <th>持续帧</th>
+                                            <th>收招</th>
+                                            <th>伤害</th>
+                                            <th>打中</th>
+                                            <th>打防</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>站轻拳</td>
+                                            <td>6</td>
+                                            <td>3</td>
+                                            <td>10</td>
+                                            <td>300</td>    
+                                            <td class="positive">+4</td>
+                                            <td class="negative">-2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- 文字说明 -->
+                            <div class="move-notes">
+                                <ul>
+                                    <li>连段衔接：可以与 <span class="move-code">5LP/2LP/2LK</span> 连按</li>
+                                    <li>确反确认窗口: 13f
+                                        <ul>
+                                            <li>绿冲取消会延迟到第 2 个有效判定帧后生效。</li>
+                                        </ul>
+                                    </li>
+                                    <li>绿冲取消有利帧：<span class="positive">+6 oH</span> / <span
+                                            class="neutral">0 oB</span></li>
+                                    <li>连段修正：作为连段起手时，下一击伤害修正 20%（100/80/70…）
+                                    </li>
+                                </ul>
+                                <p>JP 攻击距离最远的轻普技，适合作为轻连段的收尾，再取消进 <span class="move-code">轻风神</span>.</p>
+                                <p>发生帧偏慢，不适合作为稳定的防守反击手段，但在应对 <span class="move-code">2LP</span> 打空的距离陷阱时，有不错的效果。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <h3>4.2 中攻击</h3>
@@ -210,10 +279,7 @@
             </div>
             <div class="combo-video">
                 <h4>连段演示视频</h4>
-                <video src="video/light-attack-combo.mp4" 
-                    width="100%"
-                    controls
-                    preload="metadata"
+                <video src="video/light-attack-combo.mp4" width="100%" controls preload="metadata"
                     poster="video/light-attack-cover.jpg">
                     你的浏览器不支持HTML5视频播放，请升级浏览器！
                 </video>
