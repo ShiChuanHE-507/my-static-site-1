@@ -398,8 +398,8 @@ html {
 
 /* 左侧：招式名称、输入按钮、判定图 */
 .move-name {
-  font-size: 1.4rem;
-  color: #38bdf8;
+  font-size: 1.4rem !important;
+  color: #00bfff !important; /* 亮天蓝 */
   margin: 0;
 }
 .move-inputs {
