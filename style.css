@@ -580,6 +580,76 @@ html {
   }
 }
 
+/* 表格字体优化 - 适配你原有深色风格 */
+.optimized-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #334155;
+    border-radius: 6px;
+}
+.optimized-table th,
+.optimized-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid #475569;
+    font-family: "Consolas", "Monaco", monospace; /* 等宽字体，帧数字更整齐 */
+    font-size: 0.95rem; /* 字体稍大，更易读 */
+}
+.optimized-table th {
+    background: #2a3b55 !important; /* 表头比单元格稍深，层次更清晰 */
+    color: #d1d5db !important;
+}
+.optimized-table td {
+    color: #f8fafc !important;
+}
+
+/* 描述信息美化框 - 与你现有深色主题统一 */
+.move-notes-box {
+    background-color: #2a3b55; /* 比卡片背景稍深，突出描述区 */
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 16px;
+    border-left: 3px solid #00bfff; /* 左侧亮天蓝条，和招式名颜色呼应 */
+    line-height: 1.7; /* 优化行高，提升阅读体验 */
+    color: #f1f5f9;
+}
+/* 保留你原有 move-notes 的样式，仅调整边距 */
+.move-notes-box .move-notes {
+    margin: 0;
+    padding: 0;
+}
+.move-notes-box .move-notes ul {
+    margin: 0 0 12px 20px;
+    padding: 0;
+}
+.move-notes-box .move-notes li {
+    margin: 6px 0;
+}
+.move-notes-box .move-notes p {
+    margin: 0;
+    color: #f1f5f9;
+}
+/* 保留你原有 move-code 样式，确保颜色正常 */
+.move-notes-box .move-code {
+    font-size: 1.00em !important;
+    font-weight: bold;
+    color:#38bdf8 !important;
+}
+
+/* 移动端适配美化框和表格 */
+@media (max-width: 768px) {
+    .optimized-table th,
+    .optimized-table td {
+        padding: 8px 6px;
+        font-size: 0.9rem;
+    }
+    .move-notes-box {
+        padding: 15px;
+        margin-top: 12px;
+        line-height: 1.6;
+    }
+}
+
 /* 移动端适配 */
 /* 移动端适配（最终版：隐藏侧边栏+主内容全屏） */
 @media (max-width: 768px) {
