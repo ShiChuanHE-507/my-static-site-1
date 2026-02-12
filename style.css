@@ -468,9 +468,9 @@ html {
 .move-data-table td {
   font-family: monospace;
 }
-.positive { color: #34d399; font-weight: bold; }
-.negative { color: #f87171; font-weight: bold; }
-.neutral { color: #fbbf24; font-weight: bold; }
+.positive { color: #34d399 !important; font-weight: bold; }
+.negative { color: #f87171 !important; font-weight: bold; }
+.neutral { color: #fbbf24 !important; font-weight: bold; }
 
 /* 右侧：文字说明 */
 .move-notes {
@@ -602,7 +602,13 @@ html {
 .optimized-table td {
     color: #f8fafc !important;
 }
-
+/* 恢复表格中打中/打防数值的颜色 */
+.optimized-table .positive {
+  color: #34d399 !important; /* 绿色，对应打中+值 */
+}
+.optimized-table .negative {
+  color: #f87171 !important; /* 红色，对应打防-值 */
+}
 /* 描述信息美化框 - 与你现有深色主题统一 */
 .move-notes-box {
     background-color: #2a3b55; /* 比卡片背景稍深，突出描述区 */
@@ -635,7 +641,76 @@ html {
     font-weight: bold;
     color:#38bdf8 !important;
 }
+/* ========== 仅新增这段，不修改原有CSS ========== */
+/* 表格优化：仅作用于加了optimized-table类的表格，不影响其他表格 */
+table.optimized-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: #334155 !important;
+    border-radius: 6px !important;
+}
+table.optimized-table th,
+table.optimized-table td {
+    padding: 10px 8px !important;
+    text-align: center !important;
+    border: 1px solid #475569 !important;
+    font-family: "Consolas", "Monaco", monospace !important;
+    font-size: 0.95rem !important;
+}
+table.optimized-table th {
+    background: #2a3b55 !important;
+    color: #d1d5db !important;
+}
+table.optimized-table td {
+    color: #f8fafc !important;
+}
+/* 恢复表格中positive/negative颜色（优先级最高） */
+table.optimized-table td.positive {
+    color: #34d399 !important; /* 绿色 */
+}
+table.optimized-table td.negative {
+    color: #f87171 !important; /* 红色 */
+}
 
+/* 描述框美化：仅作用于move-notes-box类，不影响其他元素 */
+div.move-notes-box {
+    background-color: #2a3b55 !important;
+    border-radius: 8px !important;
+    padding: 18px !important;
+    margin-top: 16px !important;
+    border-left: 3px solid #00bfff !important;
+    line-height: 1.7 !important;
+    color: #f1f5f9 !important;
+}
+div.move-notes-box .move-notes {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+div.move-notes-box .move-notes ul {
+    margin: 0 0 12px 20px !important;
+    padding: 0 !important;
+}
+div.move-notes-box .move-notes li {
+    margin: 6px 0 !important;
+}
+div.move-notes-box .move-notes p {
+    margin: 0 !important;
+    color: #f1f5f9 !important;
+}
+
+/* 移动端适配：仅作用于小屏幕，不影响PC端 */
+@media (max-width: 768px) {
+    table.optimized-table th,
+    table.optimized-table td {
+        padding: 8px 6px !important;
+        font-size: 0.9rem !important;
+    }
+    div.move-notes-box {
+        padding: 15px !important;
+        margin-top: 12px !important;
+        line-height: 1.6 !important;
+    }
+}
 /* 移动端适配美化框和表格 */
 @media (max-width: 768px) {
     .optimized-table th,
